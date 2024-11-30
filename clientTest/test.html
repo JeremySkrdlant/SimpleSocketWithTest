@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Tester</title>
+    <link rel="stylesheet" href="socketTest.css">
+    <script defer src="socketTester.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Socket Tester</h1>
+    </header>
+    <section id="loading" class="fullSize">
+        Loading....
+    </section>
+    <section id="reciever" class="hidden">
+        <h2>Reciever</h2>
+        <div id="recieverArea">
+            waiting for new message.. 
+        </div>
+    </section>
+    <section id="emitter" class="hidden">
+        <h2>Emitter</h2>
+        <div id="emitterArea">
+            <input type="text" placeholder="Add a new Message to Send" id="newMSG" />
+            <button onclick="submitCall()">Submit Call</button>
+            <button onclick="askForBroadcast()">Request a Broadcast</button>
+        </div>
+    </section>
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js" integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+" crossorigin="anonymous"></script>
+</body>
+</html>

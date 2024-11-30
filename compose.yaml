@@ -1,0 +1,14 @@
+services:
+  socket_server:
+    build:
+      context: server/.
+    container_name: socket_server
+    ports:
+      - 3000:3000
+  socket-tester:
+    build:
+      context: clientTest/.
+    container_name: socket_tester
+    ports:
+      - 80:80     
+   
